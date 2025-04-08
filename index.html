@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bryan - Resume</title>
+
+    <meta name="description" content="Personal resume website for Bryan, a Sr. Production Owner specializing in automation, DevOps, cloud infrastructure, and system administration.">
+    <meta name="author" content="Bryan">
+    <meta name="keywords" content="Bryan, resume, portfolio, Sr. Production Owner, DevOps, Systems Engineer, Automation, Ansible, OCI, Azure, GCP, Linux, Virtualization">
+
+    <meta property="og:title" content="Bryan - Sr. Production Owner | Resume">
+    <meta property="og:description" content="Personal resume website showcasing skills and experience in DevOps, automation, cloud, and system administration.">
+    <meta property="og:image" content="[https://resume.geecloud.io/assets/BryanResumePhoto.webp](https://resume.geecloud.io/assets/BryanResumePhoto.webp)"> <meta property="og:url" content="[https://resume.geecloud.io/](https://resume.geecloud.io/)">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bryan - Sr. Production Owner | Resume">
+    <meta name="twitter:description" content="Personal resume website showcasing skills and experience in DevOps, automation, cloud, and system administration.">
+    <meta name="twitter:image" content="[https://resume.geecloud.io/assets/BryanResumePhoto.webp](https://resume.geecloud.io/assets/BryanResumePhoto.webp)"> <style>
+        /* CSS Variables for Theming */
+        :root {
+            /* Light Theme (Defaults) */
+            --bg-color: #f8fafc;
+            --text-color: #1f2937;
+            --heading-color: #000000;
+            --card-bg: #ffffff;
+            --border-color: #e5e7eb;
+            --subtle-border-color: #f3f4f6;
+            --link-color: #2563eb; /* Blue */
+            --link-hover-color: #1d4ed8;
+            --button-bg: #e5e7eb;
+            --button-text: #1f2937;
+            --button-hover-bg: #d1d5db;
+            --primary-accent: #3b82f6; /* Blue */
+            --primary-accent-text: #ffffff;
+            --secondary-accent-bg: #4b5563; /* Gray */
+            --secondary-accent-text: #ffffff;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --job-border-color: #9ca3af;
+            --current-job-border-color: var(--primary-accent);
+            --contact-bg: #374151;
+            --contact-text: #f3f4f6;
+            --contact-link-hover: #93c5fd; /* Light blue */
+            --footer-text: #6b7280;
+            --toggle-bg: #d1d5db;
+            --toggle-fg: #ffffff;
+            --toggle-icon: #6b7280;
+        }
+
+        /* --- Updated STRICTLY Grey Dark Theme --- */
+        body.dark-theme {
+            --bg-color: #1a1a1a; /* Very dark grey */
+            --text-color: #cccccc; /* Light grey */
+            --heading-color: #f0f0f0; /* Very light grey */
+            --card-bg: #2a2a2a; /* Dark grey */
+            --border-color: #444444; /* Medium grey */
+            --subtle-border-color: #2a2a2a;
+            --link-color: #bbbbbb; /* Medium-light grey */
+            --link-hover-color: #eeeeee; /* Very light grey */
+            --button-bg: #444444; /* Medium grey */
+            --button-text: #cccccc; /* Light grey */
+            --button-hover-bg: #555555; /* Slightly lighter medium grey */
+            --primary-accent: #dddddd; /* Light grey accent */
+            --primary-accent-text: #1a1a1a; /* Dark text on light grey button */
+            --secondary-accent-bg: #555555; /* Medium grey */
+            --secondary-accent-text: #f0f0f0; /* Very light grey */
+            --shadow-color: rgba(255, 255, 255, 0.05);
+            --job-border-color: #555555; /* Medium grey */
+            --current-job-border-color: var(--primary-accent); /* Use light grey accent */
+            --contact-bg: #2a2a2a; /* Dark grey */
+            --contact-text: #cccccc; /* Light grey */
+            --contact-link-hover: #eeeeee; /* Very light grey */
+            --footer-text: #888888; /* Medium grey */
+            --toggle-bg: #444444; /* Medium grey */
+            --toggle-fg: #2a2a2a;
+            --toggle-icon: #cccccc; /* Light grey */
+        }
+
+        /* General Styles (Remain the same) */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            line-height: 1.6; margin: 0; padding: 0;
+            background-color: var(--bg-color); color: var(--text-color);
+            transition: background-color 0.3s ease, color 0.3s ease; font-size: 16px;
+        }
+        .container { max-width: 850px; margin: 1.5rem auto; padding: 0 1rem; }
+        header { padding-bottom: 1.5rem; margin-bottom: 2.5rem; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+        header img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid var(--primary-accent); box-shadow: 0 4px 15px var(--shadow-color); }
+        h1, h2, h3 { color: var(--heading-color); margin: 0 0 0.5em 0; line-height: 1.3; }
+        h1 { font-size: 2.5em; font-weight: 700; margin-bottom: 0.2em; }
+        h2 { font-size: 1.8em; font-weight: 600; border-bottom: 2px solid var(--primary-accent); padding-bottom: 0.4em; margin-top: 2.5em; }
+        h3 { font-size: 1.4em; font-weight: 600; margin-top: 2em; }
+        p { margin-bottom: 1em; }
+        section { margin-bottom: 2.5rem; }
+        ul { list-style: disc; margin-left: 25px; margin-bottom: 1em; padding-left: 0; }
+        li { margin-bottom: 0.6em; }
+        a { color: var(--link-color); text-decoration: none; transition: color 0.2s ease; }
+        a:hover { color: var(--link-hover-color); text-decoration: underline; }
+        .button { display: inline-flex; align-items: center; gap: 0.5em; padding: 10px 18px; margin: 5px; border: none; background-color: var(--button-bg); color: var(--button-text); border-radius: 6px; text-decoration: none; font-weight: 500; transition: background-color 0.2s ease; cursor: pointer; box-shadow: 0 2px 5px var(--shadow-color); }
+        .button:hover { background-color: var(--button-hover-bg); text-decoration: none; }
+        .button svg { width: 1.1em; height: 1.1em; vertical-align: middle; }
+        .button.primary { background-color: var(--primary-accent); color: var(--primary-accent-text); }
+        .button.primary:hover { background-color: var(--link-hover-color); } /* Note: link-hover is now grey */
+        .button.secondary { background-color: var(--secondary-accent-bg); color: var(--secondary-accent-text); }
+        .button.secondary:hover { background-color: #666666; } /* Darker medium grey */
+        .card { background-color: var(--card-bg); border-radius: 8px; padding: 1.5rem 2rem; margin-bottom: 2.5rem; box-shadow: 0 5px 15px var(--shadow-color); border: 1px solid var(--border-color); transition: background-color 0.3s ease, border-color 0.3s ease; }
+        #skills .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+        #skills h3 { margin-top: 0; }
+        #skills .skill-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
+        #skills .skill-tag { background-color: var(--button-bg); color: var(--button-text); padding: 4px 10px; border-radius: 12px; font-size: 0.9em; }
+        .job-entry { margin-bottom: 2rem; padding: 1.5rem; padding-left: 1.75rem; border-left: 4px solid var(--job-border-color); background-color: var(--card-bg); border-radius: 0 8px 8px 0; box-shadow: 0 3px 10px var(--shadow-color); transition: border-color 0.3s ease, background-color 0.3s ease; }
+        .job-entry.current-job { border-left-color: var(--current-job-border-color); }
+        .job-entry strong { color: var(--heading-color); font-weight: 600; }
+        .job-entry em { color: var(--text-color); opacity: 0.8; font-size: 0.9em; display: block; margin-bottom: 0.8em;}
+        .job-entry h3 { margin-top: 0; margin-bottom: 0.2em;}
+        .job-entry .company { font-size: 1.1em; font-weight: 500; margin-bottom: 0.5em; color: var(--primary-accent); } /* Company name uses accent */
+        .job-entry .technologies { margin-top: 1rem; font-size: 0.9em; color: var(--text-color); opacity: 0.9; }
+        .job-entry .technologies strong { font-weight: 600; }
+        #contact { text-align: center; background-color: var(--contact-bg); color: var(--contact-text); padding: 2rem 1.5rem; border-radius: 8px; margin-top: 2rem; }
+        #contact h2 { color: var(--primary-accent); border: none; } /* Contact heading uses accent */
+        #contact p { max-width: 600px; margin-left: auto; margin-right: auto; margin-bottom: 1.5rem; }
+        #contact a:hover { color: var(--contact-link-hover); }
+        footer { margin-top: 3rem; padding: 1.5rem 1rem; border-top: 1px solid var(--border-color); text-align: center; font-size: 0.9em; color: var(--footer-text); }
+        #theme-toggle { position: fixed; top: 15px; right: 15px; background-color: var(--toggle-bg); color: var(--toggle-icon); border: none; border-radius: 50%; width: 40px; height: 40px; display: flex; justify-content: center; align-items: center; cursor: pointer; box-shadow: 0 2px 5px var(--shadow-color); z-index: 1000; transition: background-color 0.3s ease, color 0.3s ease; }
+        #theme-toggle svg { width: 20px; height: 20px; transition: transform 0.3s ease; }
+        body:not(.dark-theme) #theme-toggle .moon-icon { display: block; }
+        body:not(.dark-theme) #theme-toggle .sun-icon { display: none; }
+        body.dark-theme #theme-toggle .moon-icon { display: none; }
+        body.dark-theme #theme-toggle .sun-icon { display: block; }
+    </style>
+    </head>
+<body>
+
+    <button id="theme-toggle" title="Toggle theme">
+        <svg class="sun-icon" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
+        <svg class="moon-icon" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
+    </button>
+
+    <div class="container">
+        <header>
+             <img src="assets/BryanResumePhoto.webp" alt="Bryan">
+            <h1>Hello, I'm Bryan.</h1>
+            <div>
+                <a href="[https://www.linkedin.com/in/bryancgee/](https://www.linkedin.com/in/bryancgee/)" target="_blank" rel="noopener noreferrer" class="button primary">
+                    <svg xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    LinkedIn
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <section id="about" class="card">
+                <h2>About Me</h2>
+                <p>
+                    I've always enjoyed working with technology. Pushing myself to learn the latest technologies and using those
+                    technologies to improve workflows, efficiency, and reliability. I have a passion for learning and hope to continue
+                    improving my skills.
+                </p>
+                <h3>Key Highlights:</h3>
+                <ul>
+                    <li>Automated deployments using Ansible for virtual infrastructure.</li>
+                    <li>Configured monitoring, application self-healing, and alerting through various tools.</li>
+                    <li>Managed DNS and related network services.</li>
+                    <li>Managed Windows and Linux based servers.</li>
+                    <li>Developed fully automated CI/CD environments.</li>
+                    <li>Optimized network/server improvements using best practices.</li>
+                </ul>
+            </section>
+
+            <section id="skills" class="card">
+                <h2>Skills</h2>
+                 <div class="skills-grid">
+                    <div>
+                        <h3>Automation & DevOps</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Ansible</span><span class="skill-tag">Bash Scripting</span><span class="skill-tag">PowerShell</span><span class="skill-tag">Jenkins</span><span class="skill-tag">Docker</span><span class="skill-tag">Kubernetes</span><span class="skill-tag">Git</span><span class="skill-tag">GitHub Enterprise</span><span class="skill-tag">Rundeck</span><span class="skill-tag">CI/CD</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>OS & Virtualization</h3>
+                         <div class="skill-tags">
+                            <span class="skill-tag">Linux (RHEL, OEL, Ubuntu)</span><span class="skill-tag">Windows Server</span><span class="skill-tag">VMware vCenter</span><span class="skill-tag">VMware ESXi</span><span class="skill-tag">XCP-NG</span><span class="skill-tag">Proxmox</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Cloud & Networking</h3>
+                         <div class="skill-tags">
+                            <span class="skill-tag">Oracle Cloud Infrastructure (OCI)</span><span class="skill-tag">Azure</span><span class="skill-tag">Google Cloud (GCP)</span><span class="skill-tag">F5 Load Balancers</span><span class="skill-tag">DNS Management</span><span class="skill-tag">Network Troubleshooting</span><span class="skill-tag">Wireless Networks</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Monitoring & Management</h3>
+                         <div class="skill-tags">
+                            <span class="skill-tag">BMC TrueSight</span><span class="skill-tag">BMC Remedy</span><span class="skill-tag">Zabbix</span><span class="skill-tag">New Relic</span><span class="skill-tag">Jira</span><span class="skill-tag">Change Management (ITIL)</span><span class="skill-tag">Incident Management</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Infrastructure as Code</h3>
+                         <div class="skill-tags">
+                             <span class="skill-tag">Terraform</span>
+                         </div>
+                    </div>
+                    <div>
+                        <h3>Hardware & Support</h3>
+                         <div class="skill-tags">
+                            <span class="skill-tag">Hardware Support</span><span class="skill-tag">Printer Management</span><span class="skill-tag">Projector Support</span><span class="skill-tag">Helpdesk Support</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="experience">
+                <h2>Experience</h2>
+                <div>
+                    <article class="job-entry current-job">
+                        <h3>Sr. Production Owner</h3>
+                        <p class="company">Oracle Cerner</p>
+                        <p><em>July 2016 - Present | Full-time</em></p>
+                        <ul>
+                            <li>Automated server tasks for over 100 virtualized servers using Ansible, significantly reducing manual effort.</li>
+                            <li>Managed system operations, updates, and deployments utilizing BMC TrueSight monitoring and event management.</li>
+                            <li>Collaborated with development teams to design and implement fully automated release and patching processes for BMC TrueSight using Ansible.</li>
+                            <li>Guided users on ITIL-based Change Management procedures to ensure proper protocol adherence for production environment modifications.</li>
+                            <li>Led incident response efforts for critical production applications, coordinating troubleshooting between developers and vendors to restore service.</li>
+                        </ul>
+                        <p class="technologies">
+                            <strong>Technologies:</strong> Jira, Ansible, F5, OEL, RHEL, Rundeck, BMC TrueSight, BMC Remedy, vCenter, ESXi, Windows Server, GitHub Enterprise, Linux Server, OCI, Terraform
+                        </p>
+                    </article>
+
+                    <article class="job-entry">
+                        <h3>DevOps Engineer (Intern)</h3>
+                        <p class="company">LeisureLink Inc.</p>
+                        <p><em>October 2015 - March 2016 | Internship (6 mos)</em></p>
+                        <ul>
+                            <li>Utilized Bash scripting to automate the deployment and configuration of various system components.</li>
+                            <li>Developed automated deployment pipelines for Jenkins nodes using Docker containers, improving build consistency.</li>
+                            <li>Managed and automated MongoDB database instances hosted on Google Compute Engine (GCP).</li>
+                            <li>Contributed to ensuring the continuous functionality and improvement of IT operations infrastructure.</li>
+                         </ul>
+                        <p class="technologies">
+                            <strong>Technologies:</strong> Docker, Jenkins, Kubernetes, MongoDB, Jira, Google Cloud Platform, Bash
+                        </p>
+                    </article>
+
+                    <article class="job-entry">
+                        <h3>IT Contractor</h3>
+                        <p class="company">1st Bytes Computer Service</p>
+                        <p><em>May 2013 - December 2015 | Contract (2 yrs 8 mos)</em></p>
+                        <ul>
+                            <li>Worked effectively within small teams to accomplish diverse client IT objectives and projects.</li>
+                            <li>Managed and maintained client networks, servers (Windows Server 2003/2008 R2), printers, software, and audiovisual equipment (projectors).</li>
+                            <li>Provided Tier 1/2 helpdesk support, troubleshooting and resolving user-reported technical problems efficiently.</li>
+                            <li>Ensured the continuous functionality, reliability, and security of client IT operations through proactive maintenance.</li>
+                        </ul>
+                        <p class="technologies">
+                            <strong>Technologies:</strong> Windows Server 2003/2008 R2, Wireless Networks, Printers, Hardware Support, Projector Maintenance, Helpdesk Systems
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="education" class="card">
+                <h2>Education</h2>
+                 <div style="margin-bottom: 1rem;">
+                     <h3 style="margin-top:0; margin-bottom: 0.2em;">Bachelor of Science in Computer Information Systems</h3>
+                     <p style="margin-bottom: 0.2em;"><strong>Neumont University</strong></p>
+                     <p style="margin-bottom: 0;"><em>2016 | Salt Lake City, UT</em></p>
+                 </div>
+            </section>
+
+            <section id="contact">
+                <h2>Get In Touch</h2>
+                <p>I'm always open to discussing new opportunities or interesting projects. Feel free to connect with me on LinkedIn!</p>
+                 <div>
+                     <a href="[https://www.linkedin.com/in/bryancgee/](https://www.linkedin.com/in/bryancgee/)" target="_blank" rel="noopener noreferrer" class="button secondary">
+                        <svg xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        LinkedIn Profile
+                    </a>
+                 </div>
+            </section>
+        </main>
+
+        <footer>
+             <p>&copy; 2025 Bryan. All rights reserved.</p>
+        </footer>
+    </div><script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const currentTheme = localStorage.getItem('theme');
+
+        // Apply saved theme on initial load
+        if (currentTheme === 'dark') {
+            document.body.classList.add('dark-theme');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            // Toggle the theme class on the body
+            document.body.classList.toggle('dark-theme');
+
+            // Save the preference
+            let theme = 'light';
+            if (document.body.classList.contains('dark-theme')) {
+                theme = 'dark';
+            }
+            localStorage.setItem('theme', theme);
+        });
+    </script>
+
+</body>
+</html>
